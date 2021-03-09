@@ -19,7 +19,7 @@ export const StyledBlockName = styled.h3`
 `;
 export const StyledFilterButton = styled(Radio.Group)`
   padding: 12px 20px;
-  height: auto;
+  height: 100%;
   display: flex;
   justify-content: space-between;
 `;
@@ -27,4 +27,7 @@ export const StyledFilterButton = styled(Radio.Group)`
 export const StyledRadioButton = styled(Radio.Button)`
   flex-grow: 1;
   height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
