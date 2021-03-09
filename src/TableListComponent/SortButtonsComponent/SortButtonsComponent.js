@@ -18,7 +18,7 @@ const SortButtonsComponent = ({
         <StyledBlockName>Sort by</StyledBlockName>
         <StyledFilterButton
           onChange={(event) => sortByValue(event.target.value)}
-          defaultValue="name"
+          defaultValue="id"
           buttonStyle="solid"
         >
           <StyledRadioButton value="id">ID</StyledRadioButton>

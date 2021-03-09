@@ -52,6 +52,18 @@ function App() {
     setView(e.target.value);
   };
 
+  const handleFavorite = (id, checkboxState) => {
+    const newData = data.map((item) => {
+      if (item.id === id) {
+        item.favourite = checkboxState;
+        console.log(id);
+      }
+      return item;
+    });
+    console.log(newData);
+    setData(newData);
+  };
+
   return (
     <div className="App">
       <SortButtonsComponent
@@ -60,7 +72,11 @@ function App() {
         toggleView={toggleView}
       />
       <FiltersComponent onChange={filterOnChange} />
-      <PreviewListComponent value={view} data={filteredData} />
+      <PreviewListComponent
+        value={view}
+        data={filteredData}
+        handleFavorite={handleFavorite}
+      />
     </div>
   );
 }
